@@ -1,0 +1,55 @@
+<div class="container">
+<ejs-carousel #carousel interval="2000" [pauseOnHover]="true" [loop]="true"
+[showPlayButton]="true">
+  <ng-template #playButtonTemplate>
+    <button ejs-button #playButton content="PAUSE" cssClass="e-info playBtn" (click)="btnClick()"></button>
+  </ng-template>
+  <ng-template #indicatorsTemplate let-data>
+    <div class="indicator">
+      <img [src]="getThumbNail(data.index)" alt="images" style="height:3.1rem;width:4.6rem;padding:3px"/>
+    </div>
+  </ng-template>
+  <ng-template #previousButtonTemplate>
+    <button ejs-button
+    cssClass="e-flat e-round"
+    iconCss="e-icons e-chevron-left-double"></button>
+  </ng-template>
+  <ng-template #nextButtonTemplate>
+    <button
+      ejs-button
+      cssClass="e-flat e-round"
+      iconCss="e-icons e-chevron-right-double"
+    ></button>
+  </ng-template>
+    <e-carousel-items>
+      <e-carousel-item>
+        <ng-template #template>
+          <figure class="img-container">
+            <img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" />
+          </figure>
+        </ng-template>
+      </e-carousel-item>
+      <e-carousel-item>
+        <ng-template #template>
+          <figure class="img-container">
+            <img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" />
+          </figure>
+        </ng-template>
+      </e-carousel-item>
+      <e-carousel-item>
+        <ng-template #template>
+          <figure class="img-container">
+            <img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" />
+          </figure>
+        </ng-template>
+      </e-carousel-item>
+      <e-carousel-item>
+        <ng-template #template>
+          <figure class="img-container">
+            <img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" />
+          </figure>
+        </ng-template>
+      </e-carousel-item>
+    </e-carousel-items>
+</ejs-carousel>
+</div>
